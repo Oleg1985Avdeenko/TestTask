@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="insert_user" author="Oleg">
+        <insert tableName="user">
+            <column name="name">Oleg</column>
+            <column name="surname">Avdeenko</column>
+            <column name="lastname">Victorovich</column>
+            <column name="email">avdeenko-oleg@tut.by</column>
+            <column name="role">ADMINISTRATOR</column>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
