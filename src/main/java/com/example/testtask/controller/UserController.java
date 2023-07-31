@@ -26,12 +26,9 @@ public class UserController {
     }
 
     @GetMapping(value = "/users")
-    public ResponseEntity<List<UserDto>> read() {
-        final List<UserDto> users = userService.readAll();
+    public List<UserDto> read() {
+        return userService.readAll();
 
-        return users != null &&  !users.isEmpty()
-                ? new ResponseEntity<>(users, HttpStatus.OK)
-                : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     @GetMapping(value = "/users/{id}")
